@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<!-- Start of HTML-->
+<html lang="en" dir="ltr">
+
+  <!--Description: Individual Assignment-->
+  <!--Author: Pang Chin Ting-->
+  <!--Date: 26 October 2020 -->
+  <!--Validated date: OK 23 November 2020-->
+
+  <!-- Start of head-->
+  <head>
+    <title>Feedback</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--To link to the external CSS file-->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+  </head>
+
+<!--Navigation menu bar-->
+  <header>
+ 
+    <nav>   
+    <img src="images/LOGO.png" alt="logopic">
+    <input type="checkbox" id="click">
+          <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        </label>
+
+      <ul>
+          <li><a href="home.html" target="new_window">Home</a></li>
+          <li><a href="about.html" target="new_window">About</a></li>
+          <li><a href="services.html" target="new_window">Services</a></li>
+          <li><a href="Gallery.html" target="new_window">Gallery</a></li>
+          <li><a href="bridaldresses.html" target="new_window">Bridal dresses</a></li>
+          <li><a href="feedback.html" target="new_window">Feedback</a></li>
+          </ul>
+  </nav>
+
+
+</header>
+
+<!-- Start of Contact us-->
+<div class="feedbackus">
+<h2><em>Feedback Us</em></h2>
+<p>Get In Touch With Us.</p>
+</div>
+
+<div class="row">
+  <div class="column">
+    <img  src="images/locationicon.png" alt="contact_image" style="width:50%">
+    <p>Location</p>
+    <p>Kuching, Sarawak</p>
+  </div>
+  <div class="column">
+    <img src="images/callus.webp" alt="contact_image" style="width:50%">
+    <p>Call us</p>
+    <p>Call us for appointment</p>
+    <p>+60123456789
+  </div>
+  <div class="column">
+    <img src="images/time.png" alt="contact_image" style="width:50%">
+    <P>Opening time</P>
+    <p> Temporarily closed</p>
+  </div>
+</div>
+
+
+
+<h3 class="fillin">Please fill in below form to give us feedback.</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+
+  
+    <div class="row">
+    <div class="col-25">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="email" name="email" placeholder="example: helloeveryone@gmail.com">
+      </div>
+    </div> 
+
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="malaysia">Malaysia</option>
+          <option value="china">China</option>
+          <option value="australia">Australia</option>
+          <option value="indonesia">Indonesia</option>
+        </select>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write your message here" style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+<footer>
+
+        <p class="footer"><strong>&#169; <a href="about.html" target="new_window">Pang Chin Ting</a>| Last updated: 23 November 2020</strong></p>
+</footer>
+
+</html>

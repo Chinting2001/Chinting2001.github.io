@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<!-- Start of HTML-->
+<html lang="en" dir="ltr">
+
+  <!--Description: Individual Assignment-->
+  <!--Author: Pang Chin Ting-->
+  <!--Date: 26 October 2020 -->
+  <!--Validated date: OK 23 November 2020-->
+
+  <!-- Start of head-->
+  <head>
+    <title>That Unique Wedding Dresses</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Pang Chin Ting">
+    <meta name="description" content="Wedding Dress">
+    <meta name="keywords" content="Unique, Wedding, Dresses, Modern, Traditional">
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins:wght@100&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet"><!--To link to a font called "EB Garamond" taken from Google fonts:https://fonts.google.com/specimen/EB+Garamond?selection.family=EB+Garamond|Poppins:wght@100&query=eb--> 
+    <!--To link to a font called "Cormorant Garamond" taken from Google fonts:https://fonts.google.com/specimen/Cormorant+Garamond?query=cormo&sidebar.open=true&selection.family=Cormorant+Garamond:wght@300-->
+
+    <!--To link to the external CSS file-->
+   <link href="style.css" rel="stylesheet" type="text/css"> 
+  
+  </head>
+  
+<!-- Section -->
+<header>
+
+<!-- Nav -->
+    <nav>   
+<img src="images/LOGO.png" alt="logopic">
+<input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+
+<!--Start of the navigation menu-->
+      <ul>
+          <li><a href="home.html" target="_self">Home</a></li>
+          <li><a href="about.html" target="new_window">About</a></li>
+          <li><a href="services.html" target="new_window">Services</a></li>
+          <li><a href="Gallery.html" target="new_window">Gallery</a></li>
+          <li><a href="bridaldresses.html" target="new_window">Bridal dresses</a></li>
+          <li><a href="feedback.html" target="new_window" >Feedback</a></li>
+          </ul>
+
+<!--End of the navigation menu-->
+</nav>
+
+
+    <div class="content">
+      <div>My Perfect Match</div>
+      <div>"You are the best thing I never planned."</div>
+    </div>
+</header>
+
+  <!--Slide Container-->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="images/slide1.jpg" alt="slide1" style="width:100%">
+  <div class="text">I'm in full-on fairy tale mode.</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/slide2.png" alt="slide2" style="width:100%">
+  <div class="text">*Twirls.*</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/slide3.jpg" alt="slide3" style="width:100%">
+  <div class="text">That moment when you find THE dress.</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/slide4.jpg" alt="slide4" style="width:100%"> <!-- This photo taken from https://in.pinterest.com/pin/820007044642572071/. --> 
+  <div class="text">Be your own kind of beautiful.</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+<!-- Adding Javascipt -->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<!--Start of header-->
+<header>
+  <h2 class="intro"><em>Welcome to</em></h2>
+  <p class="logop"><img src="images/LOGO.png" alt="logopic"></p> 
+
+
+  <h2 class="intro2">That Unique Bridal Collection</h2>
+  <div class="introc2">
+  <p>Every girl should have her own unique and beautiful wedding dress in her life, so wearing a wedding dress represents every girl's dream of becoming a beautiful bride. Therefore, the focuses of this website are:</p>
+  <ul class="ul">
+      <li>White Wedding Dress</li>
+      <li>Chinese Traditional Wedding Dress</li>
+    </ul>
+
+  <p class="click">Click here to see &#8595;</p>
+  <div class="btn"><a href="bridaldresses.html" target="new_window">Bridal Dresses</a></div>
+  </div>
+
+
+  <div class="quotes">
+    <blockquote>"A dream is a wish your heart makes."</blockquote><!--This information is taken from https://www.goodreads.com/author/quotes/2868789.Cinderella-->
+
+    <cite>&#8212; Cinderella</cite>
+  </div>
+</header>
+
+
+<div class="disclaimer"><!--Section for the disclaimer-->
+  <a href="" title="The hosted website link" id="hosted" target="_blank">Click here for the hosted website</a>
+
+  <p class="disclaimer">Disclaimer: This website is created for education and non-commercial use only. It is an assignment for completion of unit, FST10011 Fundamentals of Web Technology based from Swinburne University of Technology Sarawak Campus.</p>
+</div>
+
+<footer>
+  <p class="footer"><strong>&#169; <a href="about.html" target="new_window">Pang Chin Ting</a>| Last updated: 23 November 2020</strong></p>
+</footer>
+</html>
+

@@ -1,0 +1,784 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'EB Garamond', serif;
+} 
+
+/* Navigation menu bar */
+/* index.html & home.html */
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+
+nav img{
+  width: 150px;
+  position: absolute;
+  top: 17px;
+  left: 15%
+}
+
+
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 40px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+
+}
+
+nav ul li a:hover{
+  color: grey;
+  background: #cce6ff;
+}
+nav .menu-btn i{
+  color: #e6e6e6;
+  font-size: 32px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: rgba(0,0,0,0.4);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  
+  nav ul li a:hover{
+    background: none;
+    color: #ff9999;
+  }
+}
+.content{
+  background: url(images/homepage.jpg);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 450px 0px;
+  height: 100vh;
+  color: white;
+
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* Slide */
+* {box-sizing: border-box}
+body {
+  font-family: 'EB Garamond', sans-serif; 
+  margin: 0px;
+  }
+
+.mySlides {
+  display: none;
+}
+
+img {vertical-align: middle;}
+
+
+
+/* Slideshow container */
+.slideshow-container{
+  max-width: 1300px;
+  position: relative;
+  margin: 800px 100px 0px;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+/* Header */
+.intro{
+  text-align: center;
+  background-color: #FBF6F4;
+  margin-top: 10px;
+  padding: 30px 100px 30px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  display: block;
+}
+
+.logop{
+  text-align: center;
+  padding: 210px 100px 70px;
+  margin: 30px;
+  border: groove;
+  background-image: url(images/d11.jpeg); 
+  background-size: 450px;
+}
+
+.intro2{
+  text-align: center;
+  background-color: #FBF6F4;
+  padding: 30px 100px 0px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+}
+
+
+.introc2{
+  text-align: center;
+  background-color: #FBF6F4;
+  padding: 50px 100px 50px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; 
+}
+
+.ul{
+  text-align: left;
+  list-style-type: circle;
+}
+
+
+
+.btn a{
+  display: block;
+  width: 180px;
+  height: 35px;
+  border: 2px solid #000000;
+  line-height: 35px;
+  margin: 25px auto 0;
+  color: #000000;
+  text-align: center;
+  font-family:'EB Garamond', serif; 
+}
+
+.quotes{
+  text-align: center;
+  background-color: #FBF6F4;
+  margin: 5px 0px;
+  padding: 50px 100px 50px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+}
+
+
+.disclaimer{
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+  background-color: #f6e9e3 ;
+  letter-spacing: 1.5px;
+  font-size: 25px;
+  margin: 35px 100px;
+  padding: 20px 20px;
+  padding-top: 40px;
+}
+
+
+/* All the Footer */ 
+.footer{
+  text-align: center;
+  margin-top: 100px;
+  padding: 80px 100px;
+  background-color: #e6e6e6;
+  color: #000000;
+}
+
+.footer a{
+  color: black;
+}
+
+
+/* About me */
+.aboutme{
+  text-align: center;
+  font-size: 60px;
+  padding: 10px 10px;
+  margin: 30px 20px;
+  background-color: #f2f2f2;
+}
+.myname{
+  padding: 20px 20px;
+  background-color: #ffe6e6;
+  text-align: center;
+}
+
+.myname img{
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px 10px;
+  width: 200px;
+  margin-right: 70px;
+}
+
+.aboutus{
+  text-align: center;
+  background-color: #ffe6e6;
+  padding: 30px 20px;
+  margin: 20px 20px;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.aboutus p{
+  padding: 40px 20px;
+  margin: 30px 30px;
+  background-color: #ffcccc;
+  font-family: 'EB Garamond', serif;
+ letter-spacing: 1px;
+ border-radius: 10px;
+}
+
+
+
+/*Services*/
+.textos{
+  text-align: center;
+  font-size: 60px;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.textos1{
+  font-size: 30px;
+  padding: 100px 100px 100px;
+  background: #ffe6e6;
+  letter-spacing: 1px;
+  margin: 0px  50px;
+  color: #1a1a1a;
+
+}
+
+.osquotes{
+  text-align: center;
+  font-size: 30px;
+   padding: 100px 50px ;
+   margin: 80px 50px;
+   background: #ffe6e6;
+
+}
+.services{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background: #f2f2f2;
+}
+.wrapper{
+  display: grid;
+  margin: 100px 90px auto;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+@media (max-width: 700px) {
+  .wrapper{
+    margin: 100px auto;
+  }
+}
+.wrapper .box{
+  width: 350px;
+  margin: 0 auto;
+  position: relative;
+  perspective: 1000px;
+}
+.wrapper .box .front-face{
+  background: #ffe6e6;
+  height: 220px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  transition: all 0.5s ease;
+}
+.box .front-face .icon{
+  height: 80px;
+}
+.box .front-face .icon i{
+  font-size: 65px;
+}
+.box .front-face span,
+.box .back-face span{
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .front-face .icon i,
+.box .front-face span{
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.box .back-face{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 220px;
+  width: 100%;
+  padding: 30px;
+  color: black;
+  opacity: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  background: linear-gradient(-135deg, #e6e6e6, #ff9999);
+  transform: translateY(110px) rotateX(-90deg);
+  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  transition: all 0.5s ease;
+}
+.box .back-face p{
+  margin-top: 10px;
+  text-align: justify;
+}
+.box:hover .back-face{
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+.box:hover .front-face{
+  opacity: 0;
+  transform: translateY(-110px) rotateX(90deg);
+}
+
+/* Bridal Dresses */
+.oc{
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  padding: 50px 50px;
+  margin: 30px 30px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+
+}
+
+.oc1{
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  background-color: #ffcccc;
+  border-radius: 10px;
+}
+
+div.gallery {
+  background: #ffe6e6;
+  margin: 10px 10px;
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 500px;
+  padding: 30px 10px;
+
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.chinese{
+  text-align: center;
+  margin: 20px;
+}
+
+.means{
+  padding: 10px 10px;
+  font-family: 'Cormorant Garamond', serif;
+  background:  #ffcccc;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 20px 30px;
+}
+
+table, th, td {
+  border: 2px solid black;
+}
+
+th{
+  background-color: grey;
+    padding:10px 10px;
+    font-size:22px;
+}
+
+td{
+  text-align: center;
+    background-color: pink;
+    padding: 20px 20px;
+    font-size:20px   
+}
+
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: grey;
+
+}
+
+caption{
+  font-size:20px;
+    caption-side: bottom;
+    }
+
+.wholetable{
+  background: #f2f2f2;
+  padding: 50px 50px;
+  margin: 20px 20px;
+}
+
+.price{
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  padding: 20px 10px;
+  margin: 10px 10px;
+  background-color: #ffcccc;
+  border-radius: 10px;
+}
+
+/* Feedback */
+* {
+  box-sizing: border-box;
+}
+
+.feedbackus{
+  text-align: center;
+    font-size: 20px;
+    background: #cccccc;
+    margin: 5px 10px;
+    border-radius: 10px;
+}
+
+.feedbackus h2{
+  font-size: 40px;
+}
+
+.column {
+  float: left;
+  width: 32%;
+  padding: 10px;
+  background: #ffcccc;
+  margin: 5px 5px;
+  text-align: center;
+  border-radius: 10px;
+
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+input[type=text], select, textarea {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #ff9999;
+  color: white;
+  font-size: 20px;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #80aaff;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #ccd9ff;
+  padding: 30px 50px;
+  margin: 30px 30px;
+
+}
+
+.col-25 {
+  float: left;
+  width:  100%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 100%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+
+
+.fillin{
+  background: #f2f2f2;
+  font-family: 'Cormorant Garamond', serif;
+  padding: 20px;
+  margin: 10px 10px;
+  text-align: center;
+}
+
+/* Gallery */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* Full height */
+  height: 1800px;
+
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Images used */
+.img1 { background-image: url("images/fbb1.jpeg");}
+.img2 { background-image: url("images/d8.jpg"); }
+.img3 { background-image: url("images/d13.jpg"); }
+.img4 { background-image: url("images/fbb2.jpg"); }
+.img5 { background-image: url("images/d14.jpeg"); }
+.img6 { background-image: url("images/gallery1.jpg"); }
+.img7 { background-image: url("images/gallery2.jpg"); }
+.img8 { background-image: url("images/gallery3.jpg"); }
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(252, 156, 156,0.4); /* pink w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+  border: 10px solid #f1f1f1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 500px;
+  padding: 50px;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.gbcolour{
+  text-align: center;
+  font-family:'EB Garamond', serif;
+  font-size: 50px;
+  padding-left: 20px;
+  background-color: #e6e6e6;
+  padding: 30px 60px;
+  margin: 20px 100px;
+  border-radius: 10px;
+
+}
+
+
